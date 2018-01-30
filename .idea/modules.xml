@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaPro_1_Injection.iml" filepath="$PROJECT_DIR$/JavaPro_1_Injection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jee_1_injection/jee_1_injection.iml" filepath="$PROJECT_DIR$/jee_1_injection/jee_1_injection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jee_2_preferred/jee_2_preferred.iml" filepath="$PROJECT_DIR$/jee_2_preferred/jee_2_preferred.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jee_3_singleton/jee_3_singleton.iml" filepath="$PROJECT_DIR$/jee_3_singleton/jee_3_singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jee_4_log/jee_4_log.iml" filepath="$PROJECT_DIR$/jee_4_log/jee_4_log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jee_5_transactional/jee_5_transactional.iml" filepath="$PROJECT_DIR$/jee_5_transactional/jee_5_transactional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jee_api/jee_api.iml" filepath="$PROJECT_DIR$/jee_api/jee_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jee_implementation/jee_implementation.iml" filepath="$PROJECT_DIR$/jee_implementation/jee_implementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/test/test.iml" filepath="$PROJECT_DIR$/src/test/test.iml" />
     </modules>
   </component>
 </project>

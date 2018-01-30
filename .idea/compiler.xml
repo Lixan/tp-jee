@@ -6,11 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JavaPro_1_Injection" />
+        <module name="jee_1_injection" />
+        <module name="jee_2_preferred" />
+        <module name="jee_3_singleton" />
+        <module name="jee_4_log" />
+        <module name="jee_5_transactional" />
+        <module name="jee_api" />
+        <module name="jee_implementation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JavaPro_1_Injection" target="1.8" />
+      <module name="jee_1_injection" target="1.5" />
+      <module name="jee_2_preferred" target="1.5" />
+      <module name="jee_3_singleton" target="1.5" />
+      <module name="jee_4_log" target="1.5" />
+      <module name="jee_5_transactional" target="1.5" />
+      <module name="jee_api" target="1.5" />
+      <module name="jee_implementation" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

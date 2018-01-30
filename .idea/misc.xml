@@ -3,7 +3,13 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/jee_1_injection/pom.xml" />
+        <option value="$PROJECT_DIR$/jee_2_preferred/pom.xml" />
+        <option value="$PROJECT_DIR$/jee_3_singleton/pom.xml" />
+        <option value="$PROJECT_DIR$/jee_4_log/pom.xml" />
+        <option value="$PROJECT_DIR$/jee_5_transactional/pom.xml" />
+        <option value="$PROJECT_DIR$/jee_api/pom.xml" />
+        <option value="$PROJECT_DIR$/jee_implementation/pom.xml" />
       </list>
     </option>
   </component>
