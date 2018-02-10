@@ -1,4 +1,4 @@
-package LogAnnotations;
+package Annotations;
 
 import java.lang.annotation.*;
 

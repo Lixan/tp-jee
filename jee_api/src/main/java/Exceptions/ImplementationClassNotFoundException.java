@@ -1,12 +1,12 @@
-package Api;
+package Exceptions;
 
 public class ImplementationClassNotFoundException extends Exception
 {
     public ImplementationClassNotFoundException(String interfaceNameSearched) {
-        super(String.format("Implementation of the interface \"{0}\" can not be found", interfaceNameSearched));
+        super("Implementation of the interface \""+interfaceNameSearched+"\" can not be found");
     }
 
     public ImplementationClassNotFoundException(String interfaceNameSearched, Throwable throwable) {
-        super(String.format("Implementation of the interface \"{0}\" can not be found", interfaceNameSearched), throwable);
+        super("Implementation of the interface \"\"+interfaceNameSearched+\"\" can not be found", throwable);
     }
 }

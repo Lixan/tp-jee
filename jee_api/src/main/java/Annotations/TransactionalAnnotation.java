@@ -1,4 +1,4 @@
-package TransactionalAnnotations;
+package Annotations;
 
 import java.lang.annotation.*;
 

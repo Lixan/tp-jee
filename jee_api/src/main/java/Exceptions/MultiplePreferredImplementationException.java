@@ -1,4 +1,4 @@
 package Exceptions;
 
-public class MultiplePreferredImplementationException {
+public class MultiplePreferredImplementationException extends Exception {
 }
