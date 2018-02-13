@@ -2,7 +2,7 @@ package TransactionalImpl;
 
 import Api.IOC;
 import Api.InjectAnnotation;
-import InjectAnnotations.InjectAnnotation;
+import Annotations.InjectAnnotation;
 import TransactionalModel.ComplexTreatmentException;
 import TransactionalModel.ComplexTreatmentProxy;
 import TransactionalModel.IComplexTreatment;

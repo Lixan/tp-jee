@@ -1,13 +1,18 @@
 package PreferredImpl;
 
 import Api.IOC;
-import Api.InjectAnnotation;
-import InjectAnnotations.InjectAnnotation;
-import PreferredAnnotations.PreferredAnnotation;
+import Annotations.InjectAnnotation;
+import Annotations.PreferredAnnotation;
+import Exceptions.ImplementationClassNotFoundException;
+import Exceptions.MultiplePreferredImplementationException;
 import PreferredModel.IDatabase;
 import PreferredModel.RealDatabase;
 import org.junit.Before;
 import org.junit.Test;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -15,19 +20,34 @@ import static org.junit.Assert.assertNotEquals;
 public class PreferredTest
 {
     @InjectAnnotation
-    @PreferredAnnotation
     IDatabase database;
 
     @InjectAnnotation
-    @PreferredAnnotation
     IDatabase database_2;
 
     @Before
     public void initialize()
     {
-        IOC injectionContainer = new IOC();
-        // TODO : it should return PreferredAnnotationException if preferred is not specified OR if more than 2 preferred
-        injectionContainer.inject(this);
+        try {
+            IOC injectionContainer = new IOC();
+            injectionContainer.inject(this);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (MultiplePreferredImplementationException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (ImplementationClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test

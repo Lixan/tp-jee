@@ -1,12 +1,17 @@
 package SingletonImpl;
 
 import Api.IOC;
-import Api.InjectAnnotation;
-import InjectAnnotations.InjectAnnotation;
+import Annotations.InjectAnnotation;
+import Exceptions.ImplementationClassNotFoundException;
+import Exceptions.MultiplePreferredImplementationException;
 import SingletonModel.IService;
 import SingletonModel.MyService;
 import org.junit.Before;
 import org.junit.Test;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -22,8 +27,26 @@ public class SingletonTest
     @Before
     public void initialize()
     {
-        IOC injectionContainer = new IOC();
-        injectionContainer.inject(this);
+        try {
+            IOC injectionContainer = new IOC();
+            injectionContainer.inject(this);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (MultiplePreferredImplementationException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (ImplementationClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test

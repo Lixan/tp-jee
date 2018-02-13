@@ -1,6 +1,6 @@
 package InjectionModel;
 
-import InjectAnnotations.InjectAnnotation;
+import Annotations.InjectAnnotation;
 
 public class Cat implements IAnimal
 {

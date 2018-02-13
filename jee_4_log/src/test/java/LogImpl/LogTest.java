@@ -2,7 +2,7 @@ package LogImpl;
 
 import Api.IOC;
 import Api.InjectAnnotation;
-import InjectAnnotations.InjectAnnotation;
+import Annotations.InjectAnnotation;
 import LogModel.ITreatment;
 import LogModel.TreatmentProxy;
 import org.junit.Before;
