@@ -2,8 +2,7 @@ package Annotations;
 
 import java.lang.annotation.*;
 
-@Target(value={ElementType.METHOD,ElementType.CONSTRUCTOR,ElementType.FIELD})
+@Target(value={ElementType.METHOD})
 @Retention(value= RetentionPolicy.RUNTIME)
-@Documented
 public @interface TransactionalAnnotation {
 }

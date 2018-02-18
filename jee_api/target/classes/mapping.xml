@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<mappings>
-    <mapping Interface="Api.ITable" Implementation="Api.TableEnBois"/>
-	<mapping Interface="InjectionModel.IAnimal" Implementation="InjectionModel.Dog"/>
-	<mapping Interface="InjectionModel.IFur" Implementation="InjectionModel.Silky"/>
-	
-</mappings>

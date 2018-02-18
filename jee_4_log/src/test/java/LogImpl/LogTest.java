@@ -1,6 +1,6 @@
 package LogImpl;
 
-import Api.IOC;
+import Api.InjectionFramework;
 import Api.InjectAnnotation;
 import Annotations.InjectAnnotation;
 import LogModel.ITreatment;
@@ -26,7 +26,7 @@ public class LogTest {
     @Before
     public void initialize()
     {
-        IOC injectionContainer = new IOC();
+        InjectionFramework injectionContainer = new InjectionFramework();
         injectionContainer.inject(this);
     }
 

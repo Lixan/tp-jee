@@ -1,6 +1,6 @@
 package TransactionalImpl;
 
-import Api.IOC;
+import Api.InjectionFramework;
 import Api.InjectAnnotation;
 import Annotations.InjectAnnotation;
 import TransactionalModel.ComplexTreatmentException;
@@ -20,7 +20,7 @@ public class TransactionalTest
     @Before
     public void initialize()
     {
-        IOC injectionContainer = new IOC();
+        InjectionFramework injectionContainer = new InjectionFramework();
         injectionContainer.inject(this);
     }
 

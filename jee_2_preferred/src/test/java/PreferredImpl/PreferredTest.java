@@ -1,8 +1,7 @@
 package PreferredImpl;
 
-import Api.IOC;
+import Api.InjectionFramework;
 import Annotations.InjectAnnotation;
-import Annotations.PreferredAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
 import Exceptions.MultiplePreferredImplementationException;
 import PreferredModel.IDatabase;
@@ -29,7 +28,7 @@ public class PreferredTest
     public void initialize()
     {
         try {
-            IOC injectionContainer = new IOC();
+            InjectionFramework injectionContainer = new InjectionFramework();
             injectionContainer.inject(this);
         } catch (IllegalAccessException e) {
             e.printStackTrace();

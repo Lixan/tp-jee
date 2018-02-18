@@ -5,6 +5,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.ParserConfigurationException;
 
 import Annotations.PreferredAnnotation;
+import Annotations.QualifierAnnotation;
 import Exceptions.MultiplePreferredImplementationException;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -12,22 +13,60 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
 import java.io.IOException;
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
 import java.util.Iterator;
 import java.util.Set;
 
 import org.reflections.Reflections;
 import org.xml.sax.SAXException;
 
-public class SPI
+public class ClassRetriever
 {
-    public Class<?> getImplementationFromXML(String interfaceToImplement) throws ParserConfigurationException, IOException, SAXException, ClassNotFoundException {
-        File fXmlFile = new File("C:\\Users\\Clement\\IdeaProjects\\tp-jee\\jee_api\\src\\main\\resources\\mapping.xml");
+    public Class<?> getClassToImplement(Field field) throws MultiplePreferredImplementationException, ClassNotFoundException, IOException, SAXException, ParserConfigurationException {
+        Class<?> classToInstanciate = null;
+        String fieldInterfaceName= field.getType().getName().replace("interface ", "");
+
+        if(field.isAnnotationPresent(QualifierAnnotation.class))
+        {
+            classToInstanciate = this.getClassImplementationFromQualifier(field);
+        }
+        else
+        {
+            //else check if preferred annotation is found
+            classToInstanciate = this.getImplementationPreferred(fieldInterfaceName);
+
+            //else get from classpath
+            if(classToInstanciate == null)
+            {
+
+            }
+        }
+
+        return classToInstanciate;
+    }
+
+    private Class<?> getClassImplementationFromQualifier(Field field) throws ClassNotFoundException, ParserConfigurationException, SAXException, IOException {
+        Annotation[] annotations = field.getAnnotations();
+        for(Annotation annotation : annotations){
+            if(annotation instanceof QualifierAnnotation){
+                QualifierAnnotation qualifierAnnotation = (QualifierAnnotation) annotation;
+                return getImplementationFromBeansXML(qualifierAnnotation.id());
+            }
+        }
+        return null;
+    }
+
+    private Class<?> getImplementationFromBeansXML(String id) throws ParserConfigurationException, IOException, SAXException, ClassNotFoundException {
+        ClassLoader classLoader = getClass().getClassLoader();
+        File fXmlFile = new File(classLoader.getResource("beans.xml").getFile());
+
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
         Document doc = dBuilder.parse(fXmlFile);
 
         doc.getDocumentElement().normalize();
-        NodeList nList = doc.getElementsByTagName("mapping");
+        NodeList nList = doc.getElementsByTagName("bean");
 
         for (int temp = 0; temp < nList.getLength(); temp++)
         {
@@ -35,9 +74,9 @@ public class SPI
             if (nNode.getNodeType() == Node.ELEMENT_NODE)
             {
                 Element eElement = (Element) nNode;
-                if(eElement.getAttribute("Interface").equals(interfaceToImplement))
+                if(eElement.getAttribute("id").equals(id))
                 {
-                    return Class.forName(eElement.getAttribute("Implementation"));
+                    return Class.forName(eElement.getAttribute("class"));
                 }
             }
         }
@@ -45,7 +84,7 @@ public class SPI
         return null;
     }
 
-    public Class<?> getImplementationPreferred(String interfaceToImplement) throws MultiplePreferredImplementationException, ClassNotFoundException
+    private Class<?> getImplementationPreferred(String interfaceToImplement) throws MultiplePreferredImplementationException, ClassNotFoundException
     {
         Class<?> implementationClass = Class.forName(interfaceToImplement);
         Reflections reflections = new Reflections(implementationClass.getPackage());

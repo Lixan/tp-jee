@@ -1,6 +1,6 @@
 package SingletonImpl;
 
-import Api.IOC;
+import Api.InjectionFramework;
 import Annotations.InjectAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
 import Exceptions.MultiplePreferredImplementationException;
@@ -28,7 +28,7 @@ public class SingletonTest
     public void initialize()
     {
         try {
-            IOC injectionContainer = new IOC();
+            InjectionFramework injectionContainer = new InjectionFramework();
             injectionContainer.inject(this);
         } catch (IllegalAccessException e) {
             e.printStackTrace();

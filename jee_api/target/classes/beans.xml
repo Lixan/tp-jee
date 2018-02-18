@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<beans>
+	<bean id="InjectionModel.IAnimal" class="InjectionModel.Dog"/>
+	<bean id="InjectionModel.IFur" class="InjectionModel.Silky"/>	
+</beans>

@@ -2,7 +2,8 @@ package Annotations;
 
 import java.lang.annotation.*;
 
-@Target(value={ElementType.METHOD})
+@Target(value={ElementType.FIELD})
 @Retention(value= RetentionPolicy.RUNTIME)
-public @interface LogAnnotation {
+public @interface QualifierAnnotation {
+    public String id();
 }
