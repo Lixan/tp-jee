@@ -1,5 +1,6 @@
 package InjectionImpl;
 
+import Annotations.QualifierAnnotation;
 import Api.InjectionFramework;
 import Annotations.InjectAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
@@ -21,6 +22,7 @@ public class InjectionTest
     IAnimal myAnimal;
 
     @InjectAnnotation
+    @QualifierAnnotation(id="Dog")
     IAnimal myAnimal_2;
 
     @Before

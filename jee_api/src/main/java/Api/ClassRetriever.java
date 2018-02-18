@@ -39,7 +39,8 @@ public class ClassRetriever
             //else get from classpath
             if(classToInstanciate == null)
             {
-
+                String classpathStr = System.getProperty("java.class.path");
+                int i = 0;
             }
         }
 

@@ -1,10 +1,12 @@
 package InjectionModel;
 
 import Annotations.InjectAnnotation;
+import Annotations.QualifierAnnotation;
 
 public class Cat implements IAnimal
 {
     @InjectAnnotation
+    @QualifierAnnotation(id="Silky")
     IFur fur;
 
     @Override

@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eba25510-4f68-48a0-b9ce-3eefb0957b00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jee_api/src/main/java/Annotations/QualifierAnnotation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jee_api/src/main/java/Api/ClassInstanciator.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jee_api/src/main/java/Api/IOC.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jee_api/src/main/resources/mapping.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jee_api/target/classes/mapping.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/jee_api/src/main/java/Api/SPI.java" afterPath="$PROJECT_DIR$/jee_api/src/main/java/Api/ClassRetriever.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionImpl/InjectionTest.java" afterPath="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionImpl/InjectionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_2_preferred/src/test/java/PreferredImpl/PreferredTest.java" afterPath="$PROJECT_DIR$/jee_2_preferred/src/test/java/PreferredImpl/PreferredTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_3_singleton/src/test/java/SingletonImpl/SingletonTest.java" afterPath="$PROJECT_DIR$/jee_3_singleton/src/test/java/SingletonImpl/SingletonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_4_log/src/test/java/LogImpl/LogTest.java" afterPath="$PROJECT_DIR$/jee_4_log/src/test/java/LogImpl/LogTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_5_transactional/src/test/java/TransactionalImpl/TransactionalTest.java" afterPath="$PROJECT_DIR$/jee_5_transactional/src/test/java/TransactionalImpl/TransactionalTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_api/src/main/java/Annotations/InjectAnnotation.java" afterPath="$PROJECT_DIR$/jee_api/src/main/java/Annotations/InjectAnnotation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_api/src/main/java/Annotations/LogAnnotation.java" afterPath="$PROJECT_DIR$/jee_api/src/main/java/Annotations/LogAnnotation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_api/src/main/java/Annotations/PreferredAnnotation.java" afterPath="$PROJECT_DIR$/jee_api/src/main/java/Annotations/PreferredAnnotation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_api/src/main/java/Annotations/SingletonAnnotation.java" afterPath="$PROJECT_DIR$/jee_api/src/main/java/Annotations/SingletonAnnotation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_api/src/main/java/Annotations/TransactionalAnnotation.java" afterPath="$PROJECT_DIR$/jee_api/src/main/java/Annotations/TransactionalAnnotation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Cat.java" afterPath="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Cat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Dog.java" afterPath="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Dog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_api/src/main/java/Api/ClassRetriever.java" afterPath="$PROJECT_DIR$/jee_api/src/main/java/Api/ClassRetriever.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_api/src/main/resources/beans.xml" afterPath="$PROJECT_DIR$/jee_api/src/main/resources/beans.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_api/target/classes/beans.xml" afterPath="$PROJECT_DIR$/jee_api/target/classes/beans.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/jee_1_injection/target/" />
@@ -35,17 +25,80 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/tp_jee$InjectionTest_implementationIsDog_Test.coverage" NAME="InjectionTest.implementationIsDog_Test Coverage Results" MODIFIED="1518985683216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>InjectionImpl.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="InjectionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionImpl/InjectionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+            <state relative-caret-position="-504">
+              <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding>
-                <element signature="e#1521#1522#0" expanded="true" />
-                <element signature="e#1581#1582#0" expanded="true" />
-                <marker date="1518545708025" expanded="true" signature="757:1462" ph="{...}" />
+                <element signature="e#1596#1597#0" expanded="true" />
+                <element signature="e#1656#1657#0" expanded="true" />
+                <marker date="1518985549539" expanded="true" signature="832:1537" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreferredTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_2_preferred/src/test/java/PreferredImpl/PreferredTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding>
+                <marker date="1518545707963" expanded="true" signature="797:1502" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SingletonTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_3_singleton/src/test/java/SingletonImpl/SingletonTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="966">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding>
+                <element signature="e#1903#1904#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IAnimal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/IAnimal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Dog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Cat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,8 +107,8 @@
       <file leaf-file-name="ClassRetriever.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Api/ClassRetriever.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret line="35" column="57" lean-forward="false" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+            <state relative-caret-position="309">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,83 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InjectionFramework.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Api/InjectionFramework.java">
+      <file leaf-file-name="beans.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_api/src/main/resources/beans.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassInstanciator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Api/ClassInstanciator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InjectAnnotation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Annotations/InjectAnnotation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogAnnotation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Annotations/LogAnnotation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransactionalAnnotation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Annotations/TransactionalAnnotation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QualifierAnnotation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Annotations/QualifierAnnotation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreferredAnnotation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Annotations/PreferredAnnotation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SingletonAnnotation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Annotations/SingletonAnnotation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+            <state relative-caret-position="63">
+              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -161,6 +142,7 @@
       <find>servicelo</find>
       <find>load</find>
       <find>PreferredAnnotationException</find>
+      <find>ImplementationClassNotF</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,10 +156,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/jee_1_injection/src/main/java/InjectAnnotation.java" />
         <option value="$PROJECT_DIR$/jee_1_injection/src/main/java/InjectAnnotations/InjectAnnotation.java" />
-        <option value="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Cat.java" />
-        <option value="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Dog.java" />
         <option value="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Rough.java" />
         <option value="$PROJECT_DIR$/jee_2_preferred/src/main/java/PreferredAnnotations/PreferredAnnotation.java" />
         <option value="$PROJECT_DIR$/jee_2_preferred/src/test/java/PreferredModel/PreferredAnnotationException.java" />
@@ -206,7 +185,6 @@
         <option value="$PROJECT_DIR$/jee_api/src/main/java/Api/Main.java" />
         <option value="$PROJECT_DIR$/jee_api/src/main/java/Api/IocTest.java" />
         <option value="$PROJECT_DIR$/jee_api/src/main/java/Exceptions/ImplementationClassNotFoundException.java" />
-        <option value="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionImpl/InjectionTest.java" />
         <option value="$PROJECT_DIR$/jee_2_preferred/src/test/java/PreferredImpl/PreferredTest.java" />
         <option value="$PROJECT_DIR$/jee_2_preferred/src/test/java/PreferredModel/MockedDatabase.java" />
         <option value="$PROJECT_DIR$/jee_2_preferred/src/test/java/PreferredModel/RealDatabase.java" />
@@ -224,6 +202,10 @@
         <option value="$PROJECT_DIR$/jee_api/src/main/java/Annotations/TransactionalAnnotation.java" />
         <option value="$PROJECT_DIR$/jee_api/src/main/java/Annotations/QualifierAnnotation.java" />
         <option value="$PROJECT_DIR$/jee_api/src/main/java/Api/InjectionFramework.java" />
+        <option value="$PROJECT_DIR$/jee_api/src/main/resources/beans.xml" />
+        <option value="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Cat.java" />
+        <option value="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Dog.java" />
+        <option value="$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionImpl/InjectionTest.java" />
         <option value="$PROJECT_DIR$/jee_api/src/main/java/Api/ClassRetriever.java" />
       </list>
     </option>
@@ -256,10 +238,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,41 +293,54 @@
             </path>
             <path>
               <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jee_5_transactional" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jee_5_transactional" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jee_5_transactional" type="462c0819:PsiDirectoryNode" />
+              <item name="jee_2_preferred" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jee_5_transactional" type="462c0819:PsiDirectoryNode" />
+              <item name="jee_2_preferred" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jee_5_transactional" type="462c0819:PsiDirectoryNode" />
+              <item name="jee_2_preferred" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="TransactionalImpl" type="462c0819:PsiDirectoryNode" />
+              <item name="PreferredImpl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jee_5_transactional" type="462c0819:PsiDirectoryNode" />
+              <item name="jee_3_singleton" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jee_3_singleton" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jee_3_singleton" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jee_3_singleton" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="TransactionalModel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jee_3_singleton" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SingletonImpl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
@@ -369,14 +363,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jee_api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Annotations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tp-jee" type="b2602c69:ProjectViewProjectNode" />
@@ -413,6 +399,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -659,9 +646,9 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.InjectionTest.implementationIsDog_Test" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.InjectionTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SingletonTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PreferredTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SingletonTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PreferredTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.InjectionTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.InjectionTest.cascade_implementationIsSilky_Test" />
       </list>
     </recent_temporary>
@@ -679,47 +666,47 @@
       <workItem from="1518213193119" duration="2185000" />
       <workItem from="1518257006947" duration="9588000" />
       <workItem from="1518977543835" duration="2617000" />
+      <workItem from="1518985073157" duration="645000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InjectionTest - 2018.02.18 at 19h 16m 34s.xml">
+    <history-entry file="InjectionTest - 2018.02.18 at 21h 23m 05s.xml">
       <configuration name="InjectionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InjectionTest - 2018.02.18 at 19h 17m 32s.xml">
+    <history-entry file="InjectionTest - 2018.02.18 at 21h 24m 16s.xml">
       <configuration name="InjectionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InjectionTest_implementationIsDog_Test - 2018.02.18 at 19h 27m 46s.xml">
+    <history-entry file="InjectionTest_implementationIsDog_Test - 2018.02.18 at 21h 20m 09s.xml">
       <configuration name="InjectionTest.implementationIsDog_Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InjectionTest_implementationIsDog_Test - 2018.02.18 at 19h 28m 05s.xml">
+    <history-entry file="InjectionTest_implementationIsDog_Test - 2018.02.18 at 21h 20m 56s.xml">
       <configuration name="InjectionTest.implementationIsDog_Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InjectionTest_implementationIsDog_Test - 2018.02.18 at 19h 29m 24s.xml">
+    <history-entry file="InjectionTest_implementationIsDog_Test - 2018.02.18 at 21h 22m 12s.xml">
       <configuration name="InjectionTest.implementationIsDog_Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InjectionTest_implementationIsDog_Test - 2018.02.18 at 19h 29m 51s.xml">
+    <history-entry file="InjectionTest_implementationIsDog_Test - 2018.02.18 at 21h 27m 54s.xml">
       <configuration name="InjectionTest.implementationIsDog_Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingletonTest - 2018.02.10 at 15h 09m 06s.xml">
+    <history-entry file="InjectionTest_implementationIsDog_Test - 2018.02.18 at 21h 28m 06s.xml">
+      <configuration name="InjectionTest.implementationIsDog_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PreferredTest - 2018.02.18 at 21h 24m 56s.xml">
+      <configuration name="PreferredTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingletonTest - 2018.02.18 at 21h 25m 19s.xml">
       <configuration name="SingletonTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingletonTest - 2018.02.10 at 15h 10m 02s.xml">
-      <configuration name="SingletonTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SingletonTest - 2018.02.10 at 15h 11m 13s.xml">
-      <configuration name="SingletonTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SingletonTest - 2018.02.10 at 15h 11m 36s.xml">
+    <history-entry file="SingletonTest - 2018.02.18 at 21h 27m 33s.xml">
       <configuration name="SingletonTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14390000" />
+    <option name="totallyTimeSpent" value="15035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -729,25 +716,26 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26973686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26973686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.035416666" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17916666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3991228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -758,7 +746,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jee_api/src/main/java/Api/ClassRetriever.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -768,20 +764,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jee_2_preferred/src/test/java/PreferredModel/IDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jee_3_singleton/src/test/java/SingletonModel/IService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/test/java/TransactionalModel/ComplexTreatment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -878,14 +860,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jee_api/src/main/resources/mapping.xml.fxml" />
-    <entry file="file://$PROJECT_DIR$/jee_api/src/main/resources/mapping.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_api/src/main/resources/mapping.xml" />
     <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Api/ApiAnnotationTest.java" />
     <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Api/ITable.java" />
     <entry file="file://$PROJECT_DIR$/jee_api/pom.xml">
@@ -913,14 +888,6 @@
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/org/xml/sax/InputSource.java" />
-    <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Dog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/IFur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -946,33 +913,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jee_2_preferred/src/test/java/PreferredImpl/PreferredTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <marker date="1518545707963" expanded="true" signature="797:1502" ph="{...}" />
-            <marker date="1518545707963" expanded="false" signature="1562:1577" ph=" { " />
-            <marker date="1518545707963" expanded="false" signature="1631:1637" ph=" }" />
-            <marker date="1518545707963" expanded="false" signature="1700:1715" ph=" { " />
-            <marker date="1518545707963" expanded="false" signature="1772:1778" ph=" }" />
-            <marker date="1518545707963" expanded="false" signature="1851:1866" ph=" { " />
-            <marker date="1518545707963" expanded="false" signature="1904:1910" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jee_2_preferred/src/test/java/PreferredModel/RealDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jee_3_singleton/src/test/java/SingletonImpl/SingletonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -989,15 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding>
-            <marker date="1518545707947" expanded="true" signature="643:693" ph="{...}" />
-            <marker date="1518545707947" expanded="false" signature="746:761" ph=" { " />
-            <marker date="1518545707947" expanded="false" signature="807:813" ph=" }" />
-            <marker date="1518545707947" expanded="true" signature="887:1228" ph="{...}" />
-            <marker date="1518545707947" expanded="true" signature="1311:1631" ph="{...}" />
-            <marker date="1518545707947" expanded="true" signature="1704:2046" ph="{...}" />
-            <marker date="1518545707947" expanded="true" signature="2122:2924" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,26 +941,6 @@
         <state relative-caret-position="252">
           <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/IAnimal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionImpl/InjectionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-          <folding>
-            <element signature="e#1521#1522#0" expanded="true" />
-            <element signature="e#1581#1582#0" expanded="true" />
-            <marker date="1518545708025" expanded="true" signature="757:1462" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1089,16 +1004,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Api/InjectionFramework.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
+        <state relative-caret-position="777">
           <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jee_api/src/main/resources/beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/IAnimal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Cat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionModel/Dog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_1_injection/src/test/java/InjectionImpl/InjectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="e#1596#1597#0" expanded="true" />
+            <element signature="e#1656#1657#0" expanded="true" />
+            <marker date="1518985549539" expanded="true" signature="832:1537" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_3_singleton/src/test/java/SingletonImpl/SingletonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#1903#1904#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_2_preferred/src/test/java/PreferredImpl/PreferredTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <marker date="1518545707963" expanded="true" signature="797:1502" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Api/ClassRetriever.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="35" column="57" lean-forward="false" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+        <state relative-caret-position="309">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
