@@ -23,10 +23,28 @@ import org.xml.sax.SAXException;
 
 public class ClassRetriever
 {
-    public Class<?> getClassToImplement(Field field) throws MultiplePreferredImplementationException, ClassNotFoundException, IOException, SAXException, ParserConfigurationException {
+    public Class<?> getClassToImplement(Field field) throws MultiplePreferredImplementationException, ClassNotFoundException,
+            IOException, SAXException, ParserConfigurationException {
         Class<?> classToInstanciate = null;
-        String fieldInterfaceName= field.getType().getName().replace("interface ", "");
+        String fieldName= field.getType().getName();
 
+        if(field.getType().isInterface()) {
+            classToInstanciate = getClassFromInterfaceField(field, fieldName);
+        }
+        else {
+            classToInstanciate = getClassFromClassField(fieldName);
+        }
+
+        return classToInstanciate;
+    }
+
+    private Class<?> getClassFromClassField(String fieldName) throws ClassNotFoundException{
+        return Class.forName(fieldName);
+    }
+
+    private Class<?> getClassFromInterfaceField(Field field, String fieldName) throws MultiplePreferredImplementationException, ClassNotFoundException,
+            IOException, SAXException, ParserConfigurationException {
+        Class<?> classToInstanciate = null;
         if(field.isAnnotationPresent(QualifierAnnotation.class))
         {
             classToInstanciate = this.getClassImplementationFromQualifier(field);
@@ -34,16 +52,8 @@ public class ClassRetriever
         else
         {
             //else check if preferred annotation is found
-            classToInstanciate = this.getImplementationPreferred(fieldInterfaceName);
-
-            //else get from classpath
-            if(classToInstanciate == null)
-            {
-                String classpathStr = System.getProperty("java.class.path");
-                int i = 0;
-            }
+            classToInstanciate = this.getImplementationPreferred(fieldName);
         }
-
         return classToInstanciate;
     }
 

@@ -19,11 +19,11 @@ import static org.junit.Assert.assertNotEquals;
 public class InjectionTest
 {
     @InjectAnnotation
-    IAnimal myAnimal;
-
-    @InjectAnnotation
     @QualifierAnnotation(id="Dog")
     IAnimal myAnimal_2;
+
+    @InjectAnnotation
+    Dog dog;
 
     @Before
     public void initialize()
@@ -54,36 +54,36 @@ public class InjectionTest
     @Test
     public void implementationIsDog_Test()
     {
-        assertEquals(myAnimal.getClass(), Dog.class);
+        assertEquals(myAnimal_2.getClass(), Dog.class);
     }
 
     @Test
     public void implementationIsNotCat_Test()
     {
-        assertNotEquals(myAnimal.getClass(), Cat.class);
+        assertNotEquals(myAnimal_2.getClass(), Cat.class);
     }
 
     @Test
     public void allAnimalsHaveSameInjectionClass_Test()
     {
-        assertEquals(myAnimal.getClass(), myAnimal_2.getClass());
+        assertEquals(dog.getClass(), myAnimal_2.getClass());
     }
 
     @Test
     public void animalsReferencesAreDifferents_Test()
     {
-        assertNotEquals(myAnimal, myAnimal_2);
+        assertNotEquals(dog, myAnimal_2);
     }
 
     @Test
     public void cascade_implementationIsSilky_Test()
     {
-        assertEquals(myAnimal.getFur().getClass(), Silky.class);
+        assertEquals(myAnimal_2.getFur().getClass(), Silky.class);
     }
 
     @Test
     public void cascade_implementationIsNotRough_Test()
     {
-        assertNotEquals(myAnimal.getFur(), Rough.class);
+        assertNotEquals(myAnimal_2.getFur(), Rough.class);
     }
 }
