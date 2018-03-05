@@ -19,7 +19,7 @@ public class InterceptorChain {
         firstInterceptor.setNext(tempInterceptor);
     }
 
-    public Object proceed(Object object, Method method, Object[] args) throws InvocationTargetException, IllegalAccessException {
+    public Object proceed(Object object, Method method, Object[] args) throws Exception {
         return firstInterceptor.proceed(object, method, args);
     }
 }

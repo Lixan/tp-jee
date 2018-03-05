@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 
 public interface IInterceptor {
 
-    Object proceed(Object object, Method method, Object[] args) throws InvocationTargetException, IllegalAccessException;
+    Object proceed(Object object, Method method, Object[] args) throws Exception;
 
     IInterceptor getNext();
 
