@@ -3,11 +3,13 @@ package Injection;
 import Annotations.InjectAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
 import Exceptions.MultiplePreferredImplementationException;
+import Handlers.InjectionHandler;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.lang.reflect.Proxy;
 import java.util.Stack;
 
 public class InjectionFramework
@@ -23,6 +25,9 @@ public class InjectionFramework
         while(listObjectsToCheckForInjection.size() > 0)
         {
             Object objectToInject = listObjectsToCheckForInjection.pop();
+            if(Proxy.isProxyClass(objectToInject.getClass())) {
+                objectToInject = ((InjectionHandler)Proxy.getInvocationHandler(objectToInject)).getInstance();
+            }
 
             for(Field field  : objectToInject.getClass().getDeclaredFields())
             {

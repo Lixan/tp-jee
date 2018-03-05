@@ -2,8 +2,6 @@ package test.InjectionModel;
 
 public interface IAnimal
 {
-    @Override
-    public String toString();
-
+    String toString();
     IFur getFur();
 }

@@ -1,5 +1,6 @@
 package Injection;
 
+import Exceptions.ImplementationClassNotFoundException;
 import Exceptions.MultiplePreferredImplementationException;
 import Handlers.InjectionHandler;
 import org.xml.sax.SAXException;
@@ -11,7 +12,7 @@ import java.lang.reflect.Proxy;
 
 public class InjectorProxy {
 
-    public Object getInstanceProxy(Field field) throws ClassNotFoundException, SAXException, ParserConfigurationException, MultiplePreferredImplementationException, IOException {
+    public Object getInstanceProxy(Field field) throws ClassNotFoundException, SAXException, ParserConfigurationException, MultiplePreferredImplementationException, IOException, IllegalAccessException, ImplementationClassNotFoundException, InstantiationException {
         return Proxy.newProxyInstance(field.getType().getClassLoader(), new Class<?>[] {field.getType()}, new InjectionHandler(field));
     }
 }

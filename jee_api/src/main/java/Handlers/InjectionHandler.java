@@ -17,14 +17,13 @@ import java.lang.reflect.Method;
 
 public class InjectionHandler implements InvocationHandler {
 
-    private Field field;
     private Object instance;
 
-    public InjectionHandler(Field field) {
-        this.field = field;
-    }
-    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+    public InjectionHandler(Field field) throws IllegalAccessException, MultiplePreferredImplementationException, InstantiationException, IOException, SAXException, ParserConfigurationException, ImplementationClassNotFoundException, ClassNotFoundException {
         instance = this.getInstanceFromClassRetriever(field);
+    }
+
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Object result = null;
         if(instance != null) {
             InterceptorChain chain = this.buildInterceptorChain(instance, method);
@@ -66,7 +65,7 @@ public class InjectionHandler implements InvocationHandler {
 
             for (Annotation annotation : instanceClassMethod.getDeclaredAnnotations()) {
                 for (InterceptorAnnotation interceptor : annotation.annotationType().getDeclaredAnnotationsByType(InterceptorAnnotation.class)) {
-                    //chain.addInterceptor(interceptor.interceptor());
+                    chain.addInterceptor(interceptor.interceptor());
                 }
             }
         }

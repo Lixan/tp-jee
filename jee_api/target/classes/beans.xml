@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <beans>
 	<bean id="Dog" class="test.InjectionModel.Dog"/>
+	<bean id="Cat" class="test.InjectionModel.Cat"/>
 	<bean id="Silky" class="test.InjectionModel.Silky"/>
 </beans>
