@@ -14,23 +14,8 @@
             <version>RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>jee_1_injection</groupId>
-            <artifactId>jee_1_injection</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>jee_api</groupId>
             <artifactId>jee_api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>jee_implementation</groupId>
-            <artifactId>jee_implementation</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>jee_implementation</groupId>
-            <artifactId>jee_implementation</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

@@ -1,6 +1,7 @@
 package test.InjectionImpl;
 
 import Annotations.QualifierAnnotation;
+import Handlers.InjectionHandler;
 import Injection.InjectionFramework;
 import Annotations.InjectAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
@@ -12,9 +13,9 @@ import test.InjectionModel.*;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.lang.reflect.Proxy;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 
 public class InjectionTest
 {
@@ -52,22 +53,32 @@ public class InjectionTest
     }
 
     @Test
-    public void implementationIsDog_Test()
-    {
-        assertEquals(myAnimal_2.getClass(), Dog.class);
+    public void notNullDog_Test() {
+        assertNotNull(myAnimal_2);
     }
 
     @Test
+    public void proxyImplementation() {
+        assertTrue(Proxy.isProxyClass(myAnimal_2.getClass()));
+    }
+
+    @Test
+    public void implementationIsDog_Test()
+    {
+        assertEquals(((InjectionHandler)Proxy.getInvocationHandler(myAnimal_2)).getInstance(), Dog.class);
+    }
+
+    /*@Test
     public void implementationIsNotCat_Test()
     {
         assertNotEquals(myAnimal_2.getClass(), Cat.class);
-    }
+    }*/
 
-    @Test
+    /*@Test
     public void allAnimalsHaveSameInjectionClass_Test()
     {
         assertEquals(dog.getClass(), myAnimal_2.getClass());
-    }
+    }*/
 
     @Test
     public void animalsReferencesAreDifferents_Test()
@@ -75,11 +86,11 @@ public class InjectionTest
         assertNotEquals(dog, myAnimal_2);
     }
 
-    @Test
+    /*@Test
     public void cascade_implementationIsSilky_Test()
     {
         assertEquals(myAnimal_2.getFur().getClass(), Silky.class);
-    }
+    }*/
 
     @Test
     public void cascade_implementationIsNotRough_Test()

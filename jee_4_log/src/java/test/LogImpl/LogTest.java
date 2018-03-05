@@ -14,8 +14,10 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Proxy;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class LogTest {
 
@@ -54,7 +56,7 @@ public class LogTest {
     @Test
     public void theProxyIsReturned_Test()
     {
-        assertEquals(treatment, TreatmentProxy.class);
+        assertTrue(Proxy.isProxyClass(treatment.getClass()));
     }
 
     @Test

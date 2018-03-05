@@ -18,6 +18,7 @@ public class InjectionFramework
         Stack<Object> listObjectsToCheckForInjection = new Stack<Object>(); //Cascade injection
         listObjectsToCheckForInjection.push(objectToCheckForInjection);
         InjectorProxy proxy = new InjectorProxy();
+        Object instance;
 
         while(listObjectsToCheckForInjection.size() > 0)
         {
@@ -27,8 +28,10 @@ public class InjectionFramework
             {
                 if (field.isAnnotationPresent(InjectAnnotation.class))
                 {
-                    //Object instance = proxy.getInstanceProxy(field);
-                    Object instance = getInstance(field);
+                    if(field.getType().isInterface())
+                        instance = proxy.getInstanceProxy(field);
+                    else
+                        instance = getInstance(field);
                     field.setAccessible(true);
                     field.set(objectToInject, instance);
 

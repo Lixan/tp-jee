@@ -18,12 +18,13 @@ import java.lang.reflect.Method;
 public class InjectionHandler implements InvocationHandler {
 
     private Field field;
+    private Object instance;
 
     public InjectionHandler(Field field) {
         this.field = field;
     }
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        Object instance = this.getInstance(field);
+        instance = this.getInstanceFromClassRetriever(field);
         Object result = null;
         if(instance != null) {
             InterceptorChain chain = this.buildInterceptorChain(instance, method);
@@ -32,7 +33,11 @@ public class InjectionHandler implements InvocationHandler {
         return result;
     }
 
-    private Object getInstance(Field field) throws IllegalAccessException, InstantiationException, ClassNotFoundException,
+    public Object getInstance() {
+        return instance;
+    }
+
+    private Object getInstanceFromClassRetriever(Field field) throws IllegalAccessException, InstantiationException, ClassNotFoundException,
             ParserConfigurationException, SAXException, IOException, MultiplePreferredImplementationException,
             ImplementationClassNotFoundException {
         Class<?> classToInstanciate = null;

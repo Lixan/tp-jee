@@ -21,7 +21,7 @@
       <module name="jee_3_singleton" target="1.5" />
       <module name="jee_4_log" target="1.5" />
       <module name="jee_5_transactional" target="1.5" />
-      <module name="jee_api" target="1.8" />
+      <module name="jee_api" target="1.5" />
       <module name="jee_implementation" target="1.5" />
     </bytecodeTargetLevel>
   </component>
