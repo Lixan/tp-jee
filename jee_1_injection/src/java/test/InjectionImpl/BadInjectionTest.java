@@ -1,13 +1,10 @@
 package test.InjectionImpl;
 
 import Annotations.InjectAnnotation;
-import Annotations.QualifierAnnotation;
-import Api.InjectionFramework;
+import Injection.InjectionFramework;
 import Exceptions.ImplementationClassNotFoundException;
 import Exceptions.MultiplePreferredImplementationException;
-import test.InjectionModel.Dog;
 import test.InjectionModel.IAnimal;
-import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 

@@ -1,4 +1,4 @@
-package Api;
+package Injection;
 
 import Annotations.InjectAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
@@ -17,6 +17,7 @@ public class InjectionFramework
     {
         Stack<Object> listObjectsToCheckForInjection = new Stack<Object>(); //Cascade injection
         listObjectsToCheckForInjection.push(objectToCheckForInjection);
+        InjectorProxy proxy = new InjectorProxy();
 
         while(listObjectsToCheckForInjection.size() > 0)
         {
@@ -26,8 +27,8 @@ public class InjectionFramework
             {
                 if (field.isAnnotationPresent(InjectAnnotation.class))
                 {
+                    //Object instance = proxy.getInstanceProxy(field);
                     Object instance = getInstance(field);
-
                     field.setAccessible(true);
                     field.set(objectToInject, instance);
 
@@ -37,8 +38,9 @@ public class InjectionFramework
         }
     }
 
-    private Object getInstance(Field field) throws IllegalAccessException, InstantiationException, ClassNotFoundException, ParserConfigurationException, SAXException, IOException, MultiplePreferredImplementationException, ImplementationClassNotFoundException
-    {
+    private Object getInstance(Field field) throws IllegalAccessException, InstantiationException, ClassNotFoundException,
+            ParserConfigurationException, SAXException, IOException, MultiplePreferredImplementationException,
+            ImplementationClassNotFoundException {
         Class<?> classToInstanciate = null;
         Object instance = null;
 
@@ -56,6 +58,4 @@ public class InjectionFramework
 
         return instance;
     }
-
-
 }

@@ -1,20 +1,17 @@
-package InterceptorLogic;
+package Interceptors;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class LastInterceptor extends Interceptor {
+public class LastInterceptor implements IInterceptor {
 
-    @Override
     public Object proceed(Object object, Method method, Object[] args) throws InvocationTargetException, IllegalAccessException {
         return method.invoke(object, args);
     }
 
-    @Override
-    public Interceptor getNext() {
+    public IInterceptor getNext() {
         return null;
     }
 
-    @Override
-    public void setNext(Interceptor interceptor) {}
+    public void setNext(IInterceptor interceptor) {}
 }

@@ -1,7 +1,7 @@
 package test.TransactionalImpl;
 
-import Api.InjectionFramework;
-import Api.InjectAnnotation;
+import Injection.InjectionFramework;
+import Injection.InjectAnnotation;
 import Annotations.InjectAnnotation;
 import test.TransactionalModel.ComplexTreatmentException;
 import test.TransactionalModel.ComplexTreatmentProxy;

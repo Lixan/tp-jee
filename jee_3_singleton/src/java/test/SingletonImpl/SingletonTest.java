@@ -1,6 +1,6 @@
 package test.SingletonImpl;
 
-import Api.InjectionFramework;
+import Injection.InjectionFramework;
 import Annotations.InjectAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
 import Exceptions.MultiplePreferredImplementationException;

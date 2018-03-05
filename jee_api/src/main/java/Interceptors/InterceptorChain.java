@@ -1,20 +1,20 @@
-package InterceptorLogic;
+package Interceptors;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class InterceptorChain {
 
-    private Interceptor firstInterceptor;
-    private Interceptor lastInterceptor;
+    private IInterceptor firstInterceptor;
+    private IInterceptor lastInterceptor;
 
     public InterceptorChain() {
         lastInterceptor = new LastInterceptor();
         firstInterceptor = lastInterceptor;
     }
 
-    public void addInterceptor(Interceptor interceptor) {
-        Interceptor tempInterceptor = firstInterceptor;
+    public void addInterceptor(IInterceptor interceptor) {
+        IInterceptor tempInterceptor = firstInterceptor;
         firstInterceptor = interceptor;
         firstInterceptor.setNext(tempInterceptor);
     }

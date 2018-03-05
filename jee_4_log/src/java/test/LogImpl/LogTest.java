@@ -1,7 +1,7 @@
 package test.LogImpl;
 
-import Api.InjectionFramework;
-import Api.InjectAnnotation;
+import Injection.InjectionFramework;
+import Injection.InjectAnnotation;
 import Annotations.InjectAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
 import Exceptions.MultiplePreferredImplementationException;
