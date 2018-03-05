@@ -1,5 +1,6 @@
 package test.PreferredImpl;
 
+import Handlers.InjectionHandler;
 import Injection.InjectionFramework;
 import Annotations.InjectAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
@@ -12,9 +13,9 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.lang.reflect.Proxy;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 
 public class PreferredTest
 {
@@ -25,8 +26,7 @@ public class PreferredTest
     IDatabase database_2;
 
     @Before
-    public void initialize()
-    {
+    public void initialize() {
         try {
             InjectionFramework injectionContainer = new InjectionFramework();
             injectionContainer.inject(this);
@@ -50,20 +50,20 @@ public class PreferredTest
     }
 
     @Test
-    public void preferredClassImplemented_Test()
-    {
-        assertEquals(database.getClass(), RealDatabase.class);
+    public void notNull_Test() {
+        assertNotNull(database);
+        assertNotNull(database_2);
     }
 
     @Test
-    public void implementedClassHaveSameType_Test()
-    {
-        assertEquals(database.getClass(), database_2.getClass());
+    public void proxyWrapper_Test() {
+        assertTrue(Proxy.isProxyClass(database.getClass()));
+        assertTrue(Proxy.isProxyClass(database_2.getClass()));
     }
 
     @Test
-    public void implementedClassHaveDifferentReference_Test()
-    {
-        assertNotEquals(database, database_2);
+    public void instanceTypePreferred_Test() {
+        assertTrue(((InjectionHandler)Proxy.getInvocationHandler(database)).getInstance() instanceof RealDatabase);
+        assertTrue(((InjectionHandler)Proxy.getInvocationHandler(database_2)).getInstance() instanceof RealDatabase);
     }
 }

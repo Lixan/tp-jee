@@ -4,6 +4,7 @@ import Annotations.InjectAnnotation;
 import Annotations.QualifierAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
 import Exceptions.MultiplePreferredImplementationException;
+import Handlers.InjectionHandler;
 import Injection.InjectionFramework;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +13,7 @@ import test.InjectionModel.*;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.lang.reflect.Proxy;
 
 import static org.junit.Assert.*;
 
@@ -50,7 +52,6 @@ public class CascadeInjectionTest {
     @Test
     public void cascadeInjection_Test()
     {
-        IFur fur = dog.getFur();
-        System.out.println(fur);
+        assertTrue(((InjectionHandler) Proxy.getInvocationHandler(dog.getFur())).getInstance() instanceof Silky);
     }
 }

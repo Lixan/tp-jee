@@ -1,5 +1,6 @@
 package test.SingletonImpl;
 
+import Handlers.InjectionHandler;
 import Injection.InjectionFramework;
 import Annotations.InjectAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
@@ -12,9 +13,10 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.lang.reflect.Proxy;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class SingletonTest
 {
@@ -50,20 +52,27 @@ public class SingletonTest
     }
 
     @Test
-    public void implementationHasBeenImplemented_Test()
-    {
-        assertEquals(myService1.getClass(), MyService.class);
+    public void notNull_Test() {
+        assertNotNull(myService1);
+        assertNotNull(myService2);
     }
 
     @Test
-    public void serviceHaveSameInjectionClass_Test()
-    {
-        assertEquals(myService1.getClass(), myService2.getClass());
+    public void proxyWrapper_Test() {
+        assertTrue(Proxy.isProxyClass(myService1.getClass()));
+        assertTrue(Proxy.isProxyClass(myService2.getClass()));
     }
 
     @Test
-    public void servicesReferencesAreTheSame_Test()
+    public void instanceType_Test() {
+        assertTrue(((InjectionHandler)Proxy.getInvocationHandler(myService1)).getInstance() instanceof MyService);
+        assertTrue(((InjectionHandler)Proxy.getInvocationHandler(myService2)).getInstance() instanceof MyService);
+    }
+
+    @Test
+    public void singleton_Test()
     {
-        assertEquals(myService1, myService2);
+        assertEquals(((InjectionHandler)Proxy.getInvocationHandler(myService1)).getInstance(),
+                ((InjectionHandler)Proxy.getInvocationHandler(myService2)).getInstance());
     }
 }

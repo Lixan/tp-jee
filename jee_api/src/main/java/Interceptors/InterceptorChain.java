@@ -1,5 +1,7 @@
 package Interceptors;
 
+import Injection.ClassInstanciator;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -13,9 +15,11 @@ public class InterceptorChain {
         firstInterceptor = lastInterceptor;
     }
 
-    public void addInterceptor(IInterceptor interceptor) {
+    public void addInterceptor(Class<? extends IInterceptor> interceptorClass) throws InstantiationException, IllegalAccessException {
+        IInterceptor interceptorInstance = (IInterceptor) ClassInstanciator.instanciateClass(interceptorClass);
+
         IInterceptor tempInterceptor = firstInterceptor;
-        firstInterceptor = interceptor;
+        firstInterceptor = interceptorInstance;
         firstInterceptor.setNext(tempInterceptor);
     }
 

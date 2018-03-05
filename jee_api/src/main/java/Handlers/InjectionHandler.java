@@ -3,6 +3,7 @@ package Handlers;
 import Annotations.InterceptorAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
 import Exceptions.MultiplePreferredImplementationException;
+import Helpers.InstanceProvider;
 import Injection.ClassInstanciator;
 import Injection.ClassRetriever;
 import Interceptors.InterceptorChain;
@@ -20,7 +21,7 @@ public class InjectionHandler implements InvocationHandler {
     private Object instance;
 
     public InjectionHandler(Field field) throws IllegalAccessException, MultiplePreferredImplementationException, InstantiationException, IOException, SAXException, ParserConfigurationException, ImplementationClassNotFoundException, ClassNotFoundException {
-        instance = this.getInstanceFromClassRetriever(field);
+        instance = InstanceProvider.getInstance(field);
     }
 
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
@@ -36,36 +37,15 @@ public class InjectionHandler implements InvocationHandler {
         return instance;
     }
 
-    private Object getInstanceFromClassRetriever(Field field) throws IllegalAccessException, InstantiationException, ClassNotFoundException,
-            ParserConfigurationException, SAXException, IOException, MultiplePreferredImplementationException,
-            ImplementationClassNotFoundException {
-        Class<?> classToInstanciate = null;
-        Object instance = null;
-
-        ClassRetriever classRetriever = new ClassRetriever();
-        classToInstanciate = classRetriever.getClassToImplement(field);
-
-        if(classToInstanciate != null)
-        {
-            instance = ClassInstanciator.instanciateClass(classToInstanciate);
-        }
-        else
-        {
-            throw new ImplementationClassNotFoundException(field.getName());
-        }
-
-        return instance;
-    }
-
-    private InterceptorChain buildInterceptorChain(Object instance, Method method) throws NoSuchMethodException {
+    private InterceptorChain buildInterceptorChain(Object instance, Method method) throws NoSuchMethodException, IllegalAccessException, InstantiationException {
         Method instanceClassMethod = instance.getClass().getMethod(method.getName(), method.getParameterTypes());
         InterceptorChain chain = null;
         if (instanceClassMethod != null) {
             chain = new InterceptorChain();
 
             for (Annotation annotation : instanceClassMethod.getDeclaredAnnotations()) {
-                for (InterceptorAnnotation interceptor : annotation.annotationType().getDeclaredAnnotationsByType(InterceptorAnnotation.class)) {
-                    chain.addInterceptor(interceptor.interceptor());
+                for (InterceptorAnnotation interceptorAnnot : annotation.annotationType().getDeclaredAnnotationsByType(InterceptorAnnotation.class)) {
+                    chain.addInterceptor(interceptorAnnot.interceptor());
                 }
             }
         }

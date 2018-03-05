@@ -4,6 +4,7 @@ import Annotations.InjectAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
 import Exceptions.MultiplePreferredImplementationException;
 import Handlers.InjectionHandler;
+import Helpers.InstanceProvider;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -36,7 +37,7 @@ public class InjectionFramework
                     if(field.getType().isInterface())
                         instance = proxy.getInstanceProxy(field);
                     else
-                        instance = getInstance(field);
+                        instance = InstanceProvider.getInstance(field);
                     field.setAccessible(true);
                     field.set(objectToInject, instance);
 
@@ -44,26 +45,5 @@ public class InjectionFramework
                 }
             }
         }
-    }
-
-    private Object getInstance(Field field) throws IllegalAccessException, InstantiationException, ClassNotFoundException,
-            ParserConfigurationException, SAXException, IOException, MultiplePreferredImplementationException,
-            ImplementationClassNotFoundException {
-        Class<?> classToInstanciate = null;
-        Object instance = null;
-
-        ClassRetriever classRetriever = new ClassRetriever();
-        classToInstanciate = classRetriever.getClassToImplement(field);
-
-        if(classToInstanciate != null)
-        {
-            instance = ClassInstanciator.instanciateClass(classToInstanciate);
-        }
-        else
-        {
-            throw new ImplementationClassNotFoundException(field.getName());
-        }
-
-        return instance;
     }
 }
