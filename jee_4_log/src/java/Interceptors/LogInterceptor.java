@@ -1,17 +1,30 @@
 package Interceptors;
 
-import Logger.Logger;
+import Annotations.LogAnnotation;
+import Logger.*;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class LogInterceptor implements IInterceptor {
 
     private IInterceptor nextInterceptor;
 
-    private Logger logger;
+    private ILogger logger;
 
-    public Object proceed(Object object, Method method, Object[] args) throws InvocationTargetException, IllegalAccessException {
+    public LogInterceptor() {
+        logger = new Logger();
+    }
+
+    private void configureProperties(Object object, Method method) throws NoSuchMethodException, IllegalAccessException, InstantiationException {
+        LogAnnotation logAnnot = object.getClass().getMethod(method.getName(), method.getParameterTypes())
+                .getDeclaredAnnotationsByType(LogAnnotation.class)[0];
+        logger = (ILogger) logAnnot.logger().newInstance();
+        logger.setLevel(logAnnot.level());
+    }
+
+    public Object proceed(Object object, Method method, Object[] args) throws Exception {
+        configureProperties(object, method);
+
         logger.log(method.getName() + ": in progress...");
         Object result = this.getNext().proceed(object, method, args);
         logger.log(method.getName() + ": finished.");

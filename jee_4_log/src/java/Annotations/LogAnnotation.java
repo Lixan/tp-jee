@@ -9,9 +9,6 @@ import java.lang.annotation.*;
 @Retention(value= RetentionPolicy.RUNTIME)
 @InterceptorAnnotation(interceptor= LogInterceptor.class)
 public @interface LogAnnotation {
-    public enum Level {
-        DEBUG, INFO, WARNING, ERROR;
-    }
 
     Level level() default Level.INFO;
 

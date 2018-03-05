@@ -1,0 +1,1 @@
+[WARNING] doSomethingInCaseOfWarning: in progress...[WARNING] doSomethingInCaseOfWarning: finished.

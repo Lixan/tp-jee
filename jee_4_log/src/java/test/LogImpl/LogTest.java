@@ -1,7 +1,7 @@
 package test.LogImpl;
 
+import Handlers.InjectionHandler;
 import Injection.InjectionFramework;
-import Injection.InjectAnnotation;
 import Annotations.InjectAnnotation;
 import Exceptions.ImplementationClassNotFoundException;
 import Exceptions.MultiplePreferredImplementationException;
@@ -9,14 +9,14 @@ import test.LogModel.ITreatment;
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;
+import test.LogModel.Treatment;
 
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.Proxy;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 public class LogTest {
@@ -26,11 +26,9 @@ public class LogTest {
 
     private int parameter1 = 22;
     private int parameter2 = 66;
-    private int result = -1;
 
     @Before
-    public void initialize()
-    {
+    public void initialize() {
         InjectionFramework injectionContainer = new InjectionFramework();
         try {
             injectionContainer.inject(this);
@@ -54,46 +52,62 @@ public class LogTest {
     }
 
     @Test
-    public void theProxyIsReturned_Test()
-    {
+    public void notNull_Test() {
+        assertNotNull(treatment);
+    }
+
+    @Test
+    public void proxyWrapper_Test() {
         assertTrue(Proxy.isProxyClass(treatment.getClass()));
     }
 
     @Test
-    public void logBeforeMethod_Test() throws IOException
+    public void instanceType_Test() {
+        assertTrue(((InjectionHandler)Proxy.getInvocationHandler(treatment)).getInstance() instanceof Treatment);
+    }
+
+    @Test
+    public void baseLog_Test() throws IOException
     {
        treatment.doSomething(parameter1, parameter2);
-
-       String filecontent = getFileContent("C:\\Users\\clpulby1\\Desktop\\log.txt");
-
-       boolean fileContainLogBefore = filecontent.contains("[INFO] LogModel before method parameter1="+parameter1+", parameter2="+parameter2);
-
-       assertEquals(true, fileContainLogBefore);
     }
 
     @Test
-    public void methodSuccessfullyCalled_Test() throws IOException
+    public void errorLog_Test() throws IOException
     {
-        result = treatment.doSomething(parameter1, parameter2);
-
-        String filecontent = getFileContent("C:\\Users\\clpulby1\\Desktop\\log.txt");
-
-        boolean fileContainTreamentResult = filecontent.contains("Treatment done, result is : "+result);
-
-        assertEquals(true, fileContainTreamentResult);
+        treatment.doSomethingInCaseOfError();
     }
 
     @Test
-    public void logAfterMethod_Test() throws IOException
-    {
-        treatment.doSomething(parameter1, parameter2);
+    public void warningLog_Test() throws IOException {
+        cleanLogFile();
 
-        String filecontent = getFileContent("C:\\Users\\clpulby1\\Desktop\\log.txt");
-
-        boolean fileContainLogAfter = filecontent.contains("[INFO] LogModel after method parameter1="+parameter1+", parameter2="+parameter2);
-
-        assertEquals(true, fileContainLogAfter);
+        treatment.doSomethingInCaseOfWarning();
+        String filecontent = getFileContent("log.txt");
+        boolean messageBeforeMethod = filecontent.contains("[WARNING] doSomethingInCaseOfWarning: in progress...");
+        boolean messageAfterMethod = filecontent.contains("[WARNING] doSomethingInCaseOfWarning: finished");
+        assertTrue(messageBeforeMethod);
+        assertTrue(messageAfterMethod);
     }
+
+    @Test
+    public void debugLog_Test() throws IOException {
+        cleanLogFile();
+
+        treatment.doSomethingInCaseOfDebug();
+        String filecontent = getFileContent("log.txt");
+        boolean messageBeforeMethod = filecontent.contains("[DEBUG] doSomethingInCaseOfDebug: in progress...");
+        boolean messageAfterMethod = filecontent.contains("[DEBUG] doSomethingInCaseOfDebug: finished");
+        assertTrue(messageBeforeMethod);
+        assertTrue(messageAfterMethod);
+    }
+
+    private void cleanLogFile() throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("log.txt"));
+        bufferedWriter.flush();
+        bufferedWriter.close();
+    }
+
 
     private String getFileContent(String filepath) throws IOException
     {
