@@ -28,27 +28,10 @@ public class LogTest {
     private int parameter2 = 66;
 
     @Before
-    public void initialize() {
+    public void initialize() throws Exception
+    {
         InjectionFramework injectionContainer = new InjectionFramework();
-        try {
-            injectionContainer.inject(this);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (MultiplePreferredImplementationException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (ImplementationClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        injectionContainer.inject(this);
     }
 
     @Test

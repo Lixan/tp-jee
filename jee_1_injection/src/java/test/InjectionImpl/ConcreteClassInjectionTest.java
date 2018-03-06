@@ -22,29 +22,10 @@ public class ConcreteClassInjectionTest {
     Dog dog;
 
     @Before
-    public void initialize()
+    public void initialize() throws Exception
     {
-        try
-        {
-            InjectionFramework injectionContainer = new InjectionFramework();
-            injectionContainer.inject(this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (MultiplePreferredImplementationException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (ImplementationClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        InjectionFramework injectionContainer = new InjectionFramework();
+        injectionContainer.inject(this);
     }
 
     @Test

@@ -1,16 +1,22 @@
 package test.TransactionalImpl;
 
+import Exceptions.ImplementationClassNotFoundException;
+import Exceptions.MultiplePreferredImplementationException;
+import Handlers.InjectionHandler;
 import Injection.InjectionFramework;
-import Injection.InjectAnnotation;
 import Annotations.InjectAnnotation;
+import test.TransactionalModel.ComplexTreatment;
 import test.TransactionalModel.ComplexTreatmentException;
-import test.TransactionalModel.ComplexTreatmentProxy;
 import test.TransactionalModel.IComplexTreatment;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.Proxy;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 public class TransactionalTest
 {
@@ -18,16 +24,24 @@ public class TransactionalTest
     IComplexTreatment complexTreatment;
 
     @Before
-    public void initialize()
-    {
+    public void initialize() throws Exception {
         InjectionFramework injectionContainer = new InjectionFramework();
         injectionContainer.inject(this);
     }
 
     @Test
-    public void theProxyIsReturned_Test()
-    {
-        assertEquals(complexTreatment, ComplexTreatmentProxy.class);
+    public void notNull_Test() {
+        assertNotNull(complexTreatment);
+    }
+
+    @Test
+    public void proxyWrapper_Test() {
+        assertTrue(Proxy.isProxyClass(complexTreatment.getClass()));
+    }
+
+    @Test
+    public void instanceType_Test() {
+        assertTrue(((InjectionHandler)Proxy.getInvocationHandler(complexTreatment)).getInstance() instanceof ComplexTreatment);
     }
 
     @Test

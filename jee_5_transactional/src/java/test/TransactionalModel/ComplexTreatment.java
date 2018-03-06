@@ -1,5 +1,10 @@
 package test.TransactionalModel;
 
+import Annotations.PreferredAnnotation;
+import Annotations.TransactionalAnnotation;
+import Transaction.TransactionType;
+
+@PreferredAnnotation
 public class ComplexTreatment implements IComplexTreatment
 {
     private int value;
@@ -9,6 +14,7 @@ public class ComplexTreatment implements IComplexTreatment
         value = 0;
     }
 
+    @TransactionalAnnotation(type = TransactionType.REQUIRED)
     public void doSomething(boolean throwException) throws ComplexTreatmentException
     {
         System.out.println("Complex treatment...");
