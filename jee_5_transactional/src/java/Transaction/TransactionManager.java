@@ -1,8 +1,5 @@
 package Transaction;
 
-import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Stack;
 
 public class TransactionManager {
@@ -24,6 +21,12 @@ public class TransactionManager {
             }
         }
         return transaction;
+    }
+
+    public static void closeTransaction() {
+
+        if(transactions.size() > 0)
+            transactions.pop();
     }
 
     private static ITransaction createTransaction(Object object) {

@@ -31,6 +31,7 @@ public class TransactionalInterceptor implements IInterceptor {
         catch(Exception e) {
             transaction.rollback();
         }
+        TransactionManager.closeTransaction();
         return result;
     }
 
