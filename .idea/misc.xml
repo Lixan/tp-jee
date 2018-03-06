@@ -10,6 +10,9 @@
         <option value="$PROJECT_DIR$/jee_5_transactional/pom.xml" />
         <option value="$PROJECT_DIR$/jee_api/pom.xml" />
         <option value="$PROJECT_DIR$/jee_implementation/pom.xml" />
+        <option value="$PROJECT_DIR$/jee_api_log/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/pom.xml" />
+        <option value="$PROJECT_DIR$/jee_api_transactional/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,17 +1,14 @@
 package test.TransactionalImpl;
 
-import Exceptions.ImplementationClassNotFoundException;
-import Exceptions.MultiplePreferredImplementationException;
 import Handlers.InjectionHandler;
 import Injection.InjectionFramework;
 import Annotations.InjectAnnotation;
-import Transaction.Transaction;
 import test.TransactionalModel.ComplexTreatment;
-import test.TransactionalModel.ComplexTreatmentException;
 import test.TransactionalModel.IComplexTreatment;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import Transaction.Transaction;
+
 
 import java.lang.reflect.Proxy;
 
@@ -85,8 +82,4 @@ public class TransactionalTest
         assertEquals(Transaction.getBegin(), 2);
 
     }
-
-
-
-
 }

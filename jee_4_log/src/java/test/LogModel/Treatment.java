@@ -1,9 +1,7 @@
 package test.LogModel;
 
-import Annotations.InjectAnnotation;
 import Annotations.LogAnnotation;
 import Annotations.PreferredAnnotation;
-import Annotations.SingletonAnnotation;
 import Logger.Level;
 import Logger.LoggerFile;
 

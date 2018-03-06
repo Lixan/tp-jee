@@ -28,8 +28,7 @@ public class LogTest {
     private int parameter2 = 66;
 
     @Before
-    public void initialize() throws Exception
-    {
+    public void initialize() throws Exception {
         InjectionFramework injectionContainer = new InjectionFramework();
         injectionContainer.inject(this);
     }
