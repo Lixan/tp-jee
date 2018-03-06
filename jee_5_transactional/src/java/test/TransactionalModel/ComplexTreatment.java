@@ -27,6 +27,19 @@ public class ComplexTreatment implements IComplexTreatment
         }
     }
 
+    @TransactionalAnnotation(type = TransactionType.REQUIRED_NEW)
+    public void doSomethingElse(boolean throwException) throws ComplexTreatmentException
+    {
+        System.out.println("Complex treatment...");
+
+        incrementValue();
+
+        if(throwException)
+        {
+            throw new ComplexTreatmentException();
+        }
+    }
+
     public int getValue()
     {
         return value;

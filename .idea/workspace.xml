@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eba25510-4f68-48a0-b9ce-3eefb0957b00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/ITransaction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/Transaction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionInstanciator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionType.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatmentProxy.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionManager.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionInstanciator.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_1_injection/src/java/test/InjectionImpl/CascadeInjectionTest.java" afterPath="$PROJECT_DIR$/jee_1_injection/src/java/test/InjectionImpl/CascadeInjectionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_1_injection/src/java/test/InjectionImpl/ConcreteClassInjectionTest.java" afterPath="$PROJECT_DIR$/jee_1_injection/src/java/test/InjectionImpl/ConcreteClassInjectionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_1_injection/src/java/test/InjectionImpl/InjectionTest.java" afterPath="$PROJECT_DIR$/jee_1_injection/src/java/test/InjectionImpl/InjectionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_2_preferred/src/java/test/PreferredImpl/PreferredTest.java" afterPath="$PROJECT_DIR$/jee_2_preferred/src/java/test/PreferredImpl/PreferredTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_3_singleton/src/java/test/SingletonImpl/SingletonTest.java" afterPath="$PROJECT_DIR$/jee_3_singleton/src/java/test/SingletonImpl/SingletonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_4_log/src/java/test/LogImpl/LogTest.java" afterPath="$PROJECT_DIR$/jee_4_log/src/java/test/LogImpl/LogTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_5_transactional/jee_5_transactional.iml" afterPath="$PROJECT_DIR$/jee_5_transactional/jee_5_transactional.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_5_transactional/pom.xml" afterPath="$PROJECT_DIR$/jee_5_transactional/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_5_transactional/src/java/Annotations/TransactionalAnnotation.java" afterPath="$PROJECT_DIR$/jee_5_transactional/src/java/Annotations/TransactionalAnnotation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_5_transactional/src/java/Interceptors/TransactionalInterceptor.java" afterPath="$PROJECT_DIR$/jee_5_transactional/src/java/Interceptors/TransactionalInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/Transaction.java" afterPath="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/Transaction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalImpl/TransactionalTest.java" afterPath="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalImpl/TransactionalTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatment.java" afterPath="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/IComplexTreatment.java" afterPath="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/IComplexTreatment.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/jee_1_injection/target/" />
@@ -44,71 +33,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TransactionalAnnotation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Annotations/TransactionalAnnotation.java">
+      <file leaf-file-name="TransactionalInterceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Interceptors/TransactionalInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="187">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#312#313#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InterceptorChain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Interceptors/InterceptorChain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransactionalInterceptor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Interceptors/TransactionalInterceptor.java">
+      <file leaf-file-name="ComplexTreatmentException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatmentException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransactionInstanciator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionInstanciator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#198#212#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogInterceptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_4_log/src/java/Interceptors/LogInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="5" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="22" selection-end-column="5" />
-              <folding>
-                <element signature="e#264#265#0" expanded="true" />
-                <element signature="e#301#302#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_4_log/src/java/test/LogImpl/LogTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransactionalTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalImpl/TransactionalTest.java">
+      <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/Transaction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding>
+                <element signature="e#219#220#0" expanded="true" />
+                <element signature="e#242#243#0" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#306#307#0" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="e#373#374#0" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
+                <element signature="e#552#553#0" expanded="true" />
+                <element signature="e#580#581#0" expanded="true" />
+                <element signature="e#604#605#0" expanded="true" />
+                <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#660#661#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InjectionHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Handlers/InjectionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#231#245#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionalTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalImpl/TransactionalTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="68" column="25" lean-forward="false" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,8 +138,8 @@
       <file leaf-file-name="ComplexTreatment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,31 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/Transaction.java">
+      <file leaf-file-name="IComplexTreatment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/IComplexTreatment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ITransaction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/ITransaction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassInstanciator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Injection/ClassInstanciator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -190,10 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/jee_api/src/main/java/PluginAnnotationsTreatment/IInterceptor.java" />
-        <option value="$PROJECT_DIR$/jee_4_log/src/Annotations/LogAnnotation.java" />
-        <option value="$PROJECT_DIR$/jee_1_injection/src/test/InjectionImpl/InjectionTest.java" />
-        <option value="$PROJECT_DIR$/jee_implementation/src/main/java/InterceptorLogic/IInterceptor.java" />
         <option value="$PROJECT_DIR$/jee_implementation/src/main/java/Annotations/InterceptorAnnotation.java" />
         <option value="$PROJECT_DIR$/jee_implementation/src/main/java/InterceptorLogic/LastInterceptor.java" />
         <option value="$PROJECT_DIR$/jee_implementation/src/main/java/InterceptorLogic/InterceptorChain.java" />
@@ -235,12 +230,16 @@
         <option value="$PROJECT_DIR$/jee_3_singleton/src/java/test/SingletonImpl/SingletonTest.java" />
         <option value="$PROJECT_DIR$/jee_4_log/src/java/test/LogImpl/LogTest.java" />
         <option value="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/ITransaction.java" />
-        <option value="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/Transaction.java" />
-        <option value="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalImpl/TransactionalTest.java" />
-        <option value="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatment.java" />
         <option value="$PROJECT_DIR$/jee_5_transactional/src/java/Annotations/TransactionalAnnotation.java" />
         <option value="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionInstanciator.java" />
+        <option value="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/ConnectionMap.java" />
+        <option value="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/ConnectionHolder.java" />
+        <option value="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionManager.java" />
         <option value="$PROJECT_DIR$/jee_5_transactional/src/java/Interceptors/TransactionalInterceptor.java" />
+        <option value="$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/Transaction.java" />
+        <option value="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatment.java" />
+        <option value="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/IComplexTreatment.java" />
+        <option value="$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalImpl/TransactionalTest.java" />
       </list>
     </option>
   </component>
@@ -495,106 +494,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.TransactionalTest">
-    <configuration name="InjectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.InjectionImpl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="jee_1_injection" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test.InjectionImpl" />
-      <option name="MAIN_CLASS_NAME" value="test.InjectionImpl.InjectionTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="LogTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.LogImpl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="jee_4_log" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test.LogImpl" />
-      <option name="MAIN_CLASS_NAME" value="test.LogImpl.LogTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="LogTest.logBeforeMethod_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.LogImpl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="jee_4_log" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test.LogImpl" />
-      <option name="MAIN_CLASS_NAME" value="test.LogImpl.LogTest" />
-      <option name="METHOD_NAME" value="logBeforeMethod_Test" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="SingletonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.SingletonImpl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="jee_3_singleton" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test.SingletonImpl" />
-      <option name="MAIN_CLASS_NAME" value="test.SingletonImpl.SingletonTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="TransactionalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -609,6 +508,106 @@
       <option name="MAIN_CLASS_NAME" value="test.TransactionalImpl.TransactionalTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TransactionalTest.commit_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.TransactionalImpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jee_5_transactional" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.TransactionalImpl" />
+      <option name="MAIN_CLASS_NAME" value="test.TransactionalImpl.TransactionalTest" />
+      <option name="METHOD_NAME" value="commit_Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TransactionalTest.requireNew_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.TransactionalImpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jee_5_transactional" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.TransactionalImpl" />
+      <option name="MAIN_CLASS_NAME" value="test.TransactionalImpl.TransactionalTest" />
+      <option name="METHOD_NAME" value="requireNew_Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TransactionalTest.require_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.TransactionalImpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jee_5_transactional" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.TransactionalImpl" />
+      <option name="MAIN_CLASS_NAME" value="test.TransactionalImpl.TransactionalTest" />
+      <option name="METHOD_NAME" value="require_Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TransactionalTest.rollback_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.TransactionalImpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jee_5_transactional" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.TransactionalImpl" />
+      <option name="MAIN_CLASS_NAME" value="test.TransactionalImpl.TransactionalTest" />
+      <option name="METHOD_NAME" value="rollback_Test" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -702,19 +701,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.SingletonTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.LogTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.LogTest.logBeforeMethod_Test" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.InjectionTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TransactionalTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.TransactionalTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TransactionalTest.commit_Test" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TransactionalTest.rollback_Test" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TransactionalTest.require_Test" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TransactionalTest.requireNew_Test" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.TransactionalTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.InjectionTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LogTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LogTest.logBeforeMethod_Test" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SingletonTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TransactionalTest.require_Test" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TransactionalTest.requireNew_Test" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TransactionalTest.rollback_Test" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TransactionalTest.commit_Test" />
       </list>
     </recent_temporary>
   </component>
@@ -739,44 +738,44 @@
       <workItem from="1518985073157" duration="645000" />
       <workItem from="1520073043851" duration="17576000" />
       <workItem from="1520108122269" duration="22654000" />
-      <workItem from="1520253900265" duration="23046000" />
+      <workItem from="1520253900265" duration="29916000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InjectionTest - 2018.03.06 at 00h 02m 16s.xml">
-      <configuration name="InjectionTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogTest - 2018.03.05 at 22h 04m 30s.xml">
-      <configuration name="LogTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogTest - 2018.03.05 at 22h 19m 47s.xml">
-      <configuration name="LogTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogTest - 2018.03.05 at 22h 22m 14s.xml">
-      <configuration name="LogTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogTest - 2018.03.05 at 22h 25m 01s.xml">
-      <configuration name="LogTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogTest - 2018.03.05 at 22h 27m 55s.xml">
-      <configuration name="LogTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogTest - 2018.03.05 at 22h 32m 27s.xml">
-      <configuration name="LogTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogTest_logBeforeMethod_Test - 2018.03.05 at 22h 04m 04s.xml">
-      <configuration name="LogTest.logBeforeMethod_Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TransactionalTest - 2018.03.06 at 00h 14m 30s.xml">
+    <history-entry file="TransactionalTest - 2018.03.06 at 11h 43m 36s.xml">
       <configuration name="TransactionalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TransactionalTest - 2018.03.06 at 00h 15m 30s.xml">
+    <history-entry file="TransactionalTest - 2018.03.06 at 11h 47m 15s.xml">
       <configuration name="TransactionalTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionalTest - 2018.03.06 at 11h 58m 43s.xml">
+      <configuration name="TransactionalTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionalTest - 2018.03.06 at 12h 03m 03s.xml">
+      <configuration name="TransactionalTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionalTest_requireNew_Test - 2018.03.06 at 12h 02m 40s.xml">
+      <configuration name="TransactionalTest.requireNew_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionalTest_require_Test - 2018.03.06 at 12h 02m 13s.xml">
+      <configuration name="TransactionalTest.require_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionalTest_require_Test - 2018.03.06 at 12h 02m 30s.xml">
+      <configuration name="TransactionalTest.require_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionalTest_require_Test - 2018.03.06 at 12h 04m 01s.xml">
+      <configuration name="TransactionalTest.require_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionalTest_require_Test - 2018.03.06 at 12h 04m 35s.xml">
+      <configuration name="TransactionalTest.require_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransactionalTest_rollback_Test - 2018.03.06 at 12h 02m 17s.xml">
+      <configuration name="TransactionalTest.rollback_Test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78311000" />
+    <option name="totallyTimeSpent" value="85181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="140" y="20" width="1366" height="740" extended-state="6" />
@@ -790,7 +789,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10322108" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2685624" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2685624" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -801,7 +800,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39810428" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39810428" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -828,39 +827,15 @@
           <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="42" />
+      <option name="time" value="48" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="Transaction.getBegin()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Interceptors/IInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="70" lean-forward="false" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Interceptors/LastInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="78" lean-forward="false" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jee_4_log/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jee_5_transactional/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1012,31 +987,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Interceptors/InterceptorChain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Injection/InjectorProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Handlers/InjectionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="46" column="36" lean-forward="false" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1112,34 +1067,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/IComplexTreatment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatmentException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatmentProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-83">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1201,7 +1132,7 @@
         <state relative-caret-position="238">
           <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1214,39 +1145,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Annotations/TransactionalAnnotation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalImpl/TransactionalTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1269,21 +1172,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/ConnectionHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/ConnectionMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionInstanciator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        <state relative-caret-position="476">
+          <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/TransactionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#198#212#0" expanded="true" />
+            <element signature="e#231#245#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatmentException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/IComplexTreatment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalModel/ComplexTreatment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Interceptors/InterceptorChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_api/src/main/java/Handlers/InjectionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Transaction/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/Interceptors/TransactionalInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+        <state relative-caret-position="187">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jee_5_transactional/src/java/test/TransactionalImpl/TransactionalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="68" column="25" lean-forward="false" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

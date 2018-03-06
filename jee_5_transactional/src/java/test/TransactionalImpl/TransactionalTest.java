@@ -5,6 +5,7 @@ import Exceptions.MultiplePreferredImplementationException;
 import Handlers.InjectionHandler;
 import Injection.InjectionFramework;
 import Annotations.InjectAnnotation;
+import Transaction.Transaction;
 import test.TransactionalModel.ComplexTreatment;
 import test.TransactionalModel.ComplexTreatmentException;
 import test.TransactionalModel.IComplexTreatment;
@@ -45,53 +46,47 @@ public class TransactionalTest
     }
 
     @Test
-    public void injectionComplexTreatmentInitialization_Test()
+    public void commit_Test() throws Exception
     {
-        // test state before call
-        assertEquals(0, complexTreatment.getValue());
+        Transaction.reinitialize();
+        complexTreatment.doSomething(false);
+        assertEquals(Transaction.getCommits(), 1);
+        assertEquals(Transaction.getRollbacks(), 0);
     }
 
     @Test
-    public void proxySuccessfulTreatment_Test()
+    public void rollback_Test() throws Exception
     {
-        // Test that beforeTreatment, doSomething, commit and afterTreatment changed the state
-        try
-        {
-            complexTreatment.doSomething(false);
-
-            //constructor => 0
-            //beforeTreatment => 1
-            //doSomething => 2
-            //commit => 3
-            //afterTreatment => 4
-            assertEquals(4, complexTreatment.getValue());
-        }
-        catch (ComplexTreatmentException e)
-        {
-            Assert.fail("Exception should not be thrown");
-        }
+        Transaction.reinitialize();
+        complexTreatment.doSomething(true);
+        assertEquals(Transaction.getCommits(), 0);
+        assertEquals(Transaction.getRollbacks(), 1);
     }
 
     @Test
-    public void proxyFailTreatment_Test()
+    public void require_Test() throws Exception
     {
-        // Test that rollback and afterTreatment changed the state
-        try
-        {
-            complexTreatment.doSomething(true);
-            Assert.fail("Exception should be thrown");
-        }
-        catch (ComplexTreatmentException e)
-        {
-            //constructor => 0
-            //beforeTreatment => 1
-            //doSomething => 2
-            //rollback => 0
-            //afterTreatment => 1
-            assertEquals(1, complexTreatment.getValue());
-        }
+        Transaction.reinitialize();
+        complexTreatment.doSomething(false);
+        complexTreatment.doSomething(false);
+        assertEquals(Transaction.getCommits(), 2);
+        assertEquals(Transaction.getRollbacks(), 0);
+        assertEquals(Transaction.getBegin(), 1);
+    }
+
+    @Test
+    public void requireNew_Test() throws Exception
+    {
+        Transaction.reinitialize();
+        complexTreatment.doSomethingElse(true);
+        complexTreatment.doSomethingElse(false);
+        assertEquals(Transaction.getCommits(), 1);
+        assertEquals(Transaction.getRollbacks(), 1);
+        assertEquals(Transaction.getBegin(), 2);
 
     }
+
+
 
 
 }
