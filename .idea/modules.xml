@@ -10,9 +10,6 @@
       <module fileurl="file://$PROJECT_DIR$/jee_api/jee_api.iml" filepath="$PROJECT_DIR$/jee_api/jee_api.iml" />
       <module fileurl="file://$PROJECT_DIR$/jee_api_log/jee_api_log.iml" filepath="$PROJECT_DIR$/jee_api_log/jee_api_log.iml" />
       <module fileurl="file://$PROJECT_DIR$/jee_api_transactional/jee_api_transactional.iml" filepath="$PROJECT_DIR$/jee_api_transactional/jee_api_transactional.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jee_implementation/jee_implementation.iml" filepath="$PROJECT_DIR$/jee_implementation/jee_implementation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/test/test.iml" filepath="$PROJECT_DIR$/src/test/test.iml" />
     </modules>
   </component>
 </project>

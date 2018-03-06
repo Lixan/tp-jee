@@ -14,7 +14,6 @@
         <module name="jee_api" />
         <module name="jee_api_log" />
         <module name="jee_api_transactional" />
-        <module name="jee_implementation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
